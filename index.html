@@ -325,19 +325,19 @@
 
     <script>
         // Konfigurasi Supabase Project Terpasang Sesuai Screenshot
-       const SUPABASE_URL = 'https://uhnqaxsxoumkfydymuez.supabase.co';
+const SUPABASE_URL = 'https://uhnqaxsxoumkfydymuez.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_RzHsdyCF31nuNGMR0keEw_toHN4';
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-        // Data Global State
-        let currentUser = null;
-        let activeTab = 'dashboard';
-        let currentRangeFilter = 'week'; 
-        let currentJurusanFilter = 'all'; 
 
-        let pieChartInst = null;
-        let lineChartInst = null;
-        let checkinPieInst = null;
+// Global State
+let currentUser = null;
+let activeTab = 'dashboard';
+let currentRangeFilter = 'week';
+let currentJurusanFilter = 'all';
 
+let chartInst = null;
+let barChartInst = null;
+let mainPieInst = null;
         const mockStudents = {
             "12345": { nama: "Davin Elian Noor", kelas: "XII PPLG 1", status: "Out" },
             "541241430": { nama: "Ahmad Rizky Pratama", kelas: "XI PPLG 3", status: "Out" },
